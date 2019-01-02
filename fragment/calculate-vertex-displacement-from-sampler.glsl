@@ -1,3 +1,7 @@
+/*
+ Calculate the displacement of an object's vertices based on another (modifying) set of vertices.
+*/
+
 out vec4 fragColor;
 
 void main()
@@ -5,9 +9,9 @@ void main()
 
 // sample the inputs
 vec4 objPosition = texture(sTD2DInputs[0], vUV.st);		//the original object coordinates
-vec4 modPosition = texture(sTD2DInputs[1], vUV.st);		//coordinates to displace the object's coordinates
+vec4 modPosition = texture(sTD2DInputs[1], vUV.st);		//the modifier coordinates used for displacement
 
-//scale the displacement amount
+//scale the displacement
 float scale = 0.24;
 
 //calculate the new coordinates with the displacement
